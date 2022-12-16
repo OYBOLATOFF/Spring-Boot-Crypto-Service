@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>О проекте</title>
+    <link rel="stylesheet" href="/styles/info_page.css">
+</head>
+<body>
+    <div class="body">
+        <div class="header">
+            <div class="img_logo">
+
+            </div>
+            <div class="header_menu">
+                <a href="/" class="menu_link">
+                    Зашифровать
+                </a>
+                <a href="/info" class="menu_link">
+                    О проекте
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content_header">
+                <h3>О том, как устроен проект</h3>
+            </div>
+            <div class="content_text">
+                <p style="font-weight:bold;">Об обязанностях</p>
+                <p><span style="font-weight:bold;">Алексей Шамота: </span> разработка API сервиса, принимающего на вход исходный текст с ключом для шифрования. API возвращает в JSON формате зашифрованный текст, который впоследствие отображается на странице</p>
+                <p><span style="font-weight:bold;">Рамазан Ойболатов: </span> разработка сервера, базы данных (Spring Data JPA), Frontent и Backend частей, JavaScript для обработки событий и связывающий API, который посылает запросы на API Алексея Шамоты</p>
+                <p><span style="font-weight:bold;">Используемый стек технологий/программ: </span><br>Рамазан:  <b>Java Spring Boot</b>, <b>JavaScript</b>, <b>Hibernate</b>, <b>POSTMAN</b>, <b>MySQL</b>, <b>Thymeleaf</b><br>Алексей: <b>Python Django</b>, ...</p>
+                <hr>
+                <p style="font-weight:bold;">Метод шифрования: исключающее или (оно же XOR)</p>
+                <p><b>Описание метода:</b> помимо основных логических операций, с которыми мы привыкли работать, есть менее известная, но не менее полезная
+                операция XOR. Она похожа на "ИЛИ", но исключает ту ситуацию, когда оба значения одинаковы, например: 1 и 1
+                . Таблица истинности будет выглядеть так: </p><img src="/images/Таблица%20истинности%20для%20XOR.jpg" alt="Таблица истинности">
+                <p>Эта операция происходит побитово относительно каждой цифры. Вот наглядный пример:</p><img src="/images/xor_example_1.jpg" alt="Первый пример XOR">
+                <p>Примечательно то, что, совершив те же самые действия относительно зашифрованного текста, мы получим его исходный вид</p>
+                <p>Сама же <b>блок-схема</b> выглядит так:</p> <img src="/images/scheme.jpg" alt="Блок-схема криптопроекта">
+                <hr>
+                <p style="font-weight:bold;">Скриншоты:</p>
+                <p>Django Rest API, принимающий запросы от Java</p>
+                <img src="/images/python_django_rest_api_example.jpg" alt="Django Rest API">
+                <p>Spring Rest Controller, принимающий GET запросы с сайта и посылающий их на Django Rest API</p>
+                <img src="/images/spring_rest_controller.jpg" alt="Spring Rest Controller">
+                <p>Что делает студент <b>ИТиАБД</b>, когда ему скучно? Верно, <b>ворует большие данные</b>!</p>
+                <p>Вот и нам с Алексеем стало скучно, и мы решили слегка скоммуниздить</p>
+                <img src="/images/database_records.jpg" alt="Коммуниздим инфу. Hibernate/MySQL">
+            </div>
+        </div>
+    </div>
+    <script src="/scrypts/animation.js"></script>
+    <script language="JavaScript">
+        var headerTitle = document.querySelector('.img_logo')
+        startAnimation(headerTitle, 'Проект-шифратор Рамазана и Алексея')
+    </script>
+</body>
+</html>

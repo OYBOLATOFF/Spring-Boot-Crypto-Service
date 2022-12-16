@@ -1,0 +1,162 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    font-family: Arial;
+    background: #EEEEEE;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.body > * {
+    width: 100%;
+}
+
+.header {
+    background: #222831;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 90px;
+    color: #EEEEEE;
+}
+
+.menu_link {
+    color: #EEEEEE;
+    text-decoration: none;
+    transition: .15s linear;
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+    margin-right: 15px;
+}
+
+.menu_link:last-child {
+    margin-right: 0;
+}
+
+.menu_link::after {
+    display: block;
+    content: "";
+    width: 0%;
+    background: #EEEEEE;
+    height: 2px;
+    bottom: -3px;
+    position: absolute;
+    transition: .15s linear;
+}
+
+.menu_link:hover::after {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 85%;
+    padding-top: 100px;
+}
+
+.fields_block {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    height: 65%;
+    width: 100%;
+}
+
+.source_text, .encrypted_text {
+    background: #222831;
+    height: 100%;
+    width: 40%;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: 1px solid black;
+}
+
+.button_block {
+    width: 100%;
+    height: 35%;
+    text-align: center;
+}
+
+.crypt_button {
+    margin-top: 20px;
+    border-radius: 5px;
+    font-size: 30px;
+    height: auto;
+    padding: 17px;
+    transition: .15s linear;
+}
+
+.crypt_button:hover {
+    transform: scale(0.92);
+    background: #222831;
+    color: #EEEEEE;
+}
+
+.source_text_header, .encrypted_text_header {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px dashed black;
+    color: #EEEEEE;
+    font-weight: bold;
+}
+
+.source_text_field {
+    height: 90%;
+    width: 100%;
+}
+
+.source_text_field > textarea, .encrypted_text_field > textarea {
+    outline: none;
+    border: 0px;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    transition: .15s linear;
+    font-size: 20px;
+    resize: none;
+    font-family: Arial, serif;
+}
+
+.source_text_field > textarea:hover, .encrypted_text_field:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, .5) inset;
+}
+
+.encrypted_text_field {
+    height: 90%;
+    width: 100%;
+}
+
+.error_message {
+    margin-top: 10px;
+    color: red;
+    font-weight: bold;
+}
+
+.crypt_key {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Проекта РА</title>
+    <link rel="stylesheet" href="/styles/main_page.css">
+</head>
+<body>
+    <div class="body">
+        <div class="header">
+            <div class="img_logo">
+
+            </div>
+            <div class="header_menu">
+                <a href="/" class="menu_link">
+                    Зашифровать
+                </a>
+                <a href="/info" class="menu_link">
+                    О проекте
+                </a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="key_for_crypt_field">
+                <input type="text" name="crypt_key" placeholder="Ключ шифрования" class="crypt_key" id="crypt_key_input">
+            </div>
+            <div class="fields_block"   >
+                <div class="source_text" style="margin-right: 10px">
+                    <div class="source_text_header">Исходный текст</div>
+                    <div class="source_text_field">
+                        <textarea placeholder="Начните что-то вводить..." class="source_text_area" name="source_text_area" id="area"></textarea>
+                    </div>
+                </div>
+                <div class="encrypted_text" style="margin-left: 10px">
+                    <div class="encrypted_text_header">Зашифрованный текст</div>
+                    <div class="encrypted_text_field">
+                        <textarea placeholder="Начните что-то вводить..." id="encrypted_text_result"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="button_block">
+                <button class="crypt_button" type="button" id="download_encrypted_text_btn">Сохранить в текстовый файл</button>
+                <div class="error_message"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/scrypts/encrypt.js"></script>
+    <script src="/scrypts/downloadEncryptedFIle.js"></script>
+    <script src="/scrypts/animation.js"></script>
+</body>
+</html>
