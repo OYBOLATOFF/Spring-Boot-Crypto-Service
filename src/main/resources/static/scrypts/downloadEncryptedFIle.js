@@ -16,7 +16,7 @@ downloadButton.addEventListener('click', () => {
         startAnimation(errorMessage, 'Необходимо выбрать ключ для шифрования', false, 30);
         return null;
     }
-    var downloadFileURL = new URL('http://25.12.237.67:8080/downloadEncryptedText')
+    var downloadFileURL = new URL('http://localhost:8080/downloadEncryptedText')
 
     var key = key_input.value;
     downloadFileURL.searchParams.set('text', sourceTextArea.value);
